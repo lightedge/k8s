@@ -7,12 +7,12 @@ metadata:
 spec:
   containers:
   - name: open5gs
-    image: 5gempower/open5gs:latest
+    image: sensefbk/open5gs:latest
     tty: true
     securityContext:
       privileged: true
   - name: open5gs-webui
-    image: 5gempower/open5gs-webui:latest
+    image: sensefbk/open5gs-webui:latest
     tty: true
   - name: mongo
     image: mongo:latest
@@ -51,8 +51,8 @@ metadata:
     name: enb93
 spec:
   containers:
-  - name: srs-enb
-    image: winlab/srsenb:latest
+  - name: srslte-enb-enb
+    image: sensefbk/srslte-enb:latest
     tty: true
     securityContext:
       privileged: true
